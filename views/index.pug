@@ -1,0 +1,35 @@
+extends layout
+block content
+  .row
+    .col-md-8
+      h1="Generate report"
+      form.form-horizontal.well(method="post", action="/pdf")
+          .form-group
+              label.col-md-2.control-label Name 
+              .col-md-10
+                .input-group
+                  input.form-control(type="text", required='true', name="filename", placeholder="Name of the file")
+                  .input-group-addon=".pdf"
+          .form-group
+              label.col-md-2.control-label Title 
+              .col-md-10
+                textarea.form-control(name="content", required='true', placeholder="Put your title here!")
+          .form-group
+              label.col-md-2.control-label Company 
+              .col-md-10
+                input.form-control(name="company", required='true', placeholder="Introduct the company")
+          .form-group
+              label.col-md-2.control-label Meeting ID 
+              .col-md-10
+                input.form-control(type='number', required='true', name="junta",  placeholder="Insert meeting ID")
+          .form-group
+              label.col-md-2.control-label Initial Date 
+              .col-md-4
+                input.form-control(type='date', required='true', name="fech_In", placeholder="Insert the initial date")
+              label.col-md-2.control-label Laste Date 
+              .col-md-4
+                input.form-control(type='date', required='true', name="fech_Fin", placeholder="insert the laste date")
+              
+          .form-group
+              .col-sm-offset-2.col-sm-10
+                input.btn.btn-default(type="submit", value="Create Report")
