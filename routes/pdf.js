@@ -5,7 +5,8 @@ var sql = require("mssql");
 var conn = require("../connection/connect")();
 
 // GET request to /pdf simplified without any data to check if my post is not working, this works
-/*router.post('/', (req, res) => {
+
+router.post('/', (req, res) => {
   const PDFDocument = require('./pdfkit-tables');
   const doc = new PDFDocument({ layout: 'landscape' });
 
@@ -36,7 +37,6 @@ var conn = require("../connection/connect")();
   doc.pipe(res);
   doc.end();
 });
-*/
 
 
 
